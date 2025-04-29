@@ -218,7 +218,7 @@ int nbDaun (Isi_Tree P){
             }
         }
     }
-    printf("Jumlah Leaf pada Tree : %d",Jml_Daun);
+    return Jml_Daun;
 }
 
 
