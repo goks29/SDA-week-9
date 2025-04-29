@@ -169,7 +169,7 @@ void Level_order(Isi_Tree P, int Maks_node){
 
 void PrintTree(Isi_Tree P) {
     
-    void cetak(int index, int level) {
+    void cetak(int index, int level){
         if (index == nil || P[index].info == '\0'){
             return;
         } 
@@ -223,6 +223,24 @@ int nbDaun (Isi_Tree P){
 
 
 int Level (Isi_Tree P, infotype X){
+    int index = 1;
+    int depth = 0;
+
+    while (P[index].info != X && index <= jml_maks) {
+        index++;
+    }
+
+    if (index > jml_maks) {
+        return nil;
+    }
+
+    while (P[index].ps_pr != nil) {
+        index = P[index].ps_pr;
+        depth++;
+    }
+
+    return depth;
+
 
 }
 
