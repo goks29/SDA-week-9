@@ -71,7 +71,6 @@ boolean IsEmpty (Isi_Tree P){
     }else{
         return false;
     }
-    
 }
 
 /***** Traversal *****/
