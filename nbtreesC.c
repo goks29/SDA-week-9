@@ -74,7 +74,6 @@ boolean IsEmpty (Isi_Tree P){
     
 }
 
-
 /***** Traversal *****/
 void PreOrder (Isi_Tree P){
 
