@@ -168,22 +168,21 @@ void Level_order(Isi_Tree P, int Maks_node){
 }
 
 void PrintTree(Isi_Tree P) {
-    
-    void cetak(int index, int level) {
-        if (index == nil || P[index].info == '\0'){
-            return;
-        } 
+    cetak(P,1, 0); 
+}
 
-        for (int i = 0; i < level; i++) {
-            printf("  ");
-        }
-        printf("%c\n", P[index].info);
+void cetak(Isi_Tree P, index, int level) {
+    if (index == nil || P[index].info == '\0'){
+        return;
+    } 
 
-        cetak(P[index].ps_fs, level + 1); 
-        cetak(P[index].ps_nb, level);     
+    for (int i = 0; i < level; i++) {
+        printf("  ");
     }
+    printf("%c\n", P[index].info);
 
-    cetak(1, 0); 
+    cetak(P[index].ps_fs, level + 1); 
+    cetak(P[index].ps_nb, level);     
 }
 
 boolean Search (Isi_Tree P, infotype X){
