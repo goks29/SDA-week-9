@@ -29,7 +29,8 @@ int main(){
 
         switch (PilihMenu) {
             case 1:
-                
+                PreOrder(F);
+                printf("\n\n");
                 break;
             case 2:
                 InOrder(F);

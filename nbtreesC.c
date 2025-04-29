@@ -75,7 +75,26 @@ boolean IsEmpty (Isi_Tree P){
 
 /***** Traversal *****/
 void PreOrder (Isi_Tree P){
-    
+    int current;
+    boolean resmi;
+
+    current = 1;
+    resmi = true;
+    printf("%c -> ",P[current].info);
+
+    while(current != nil){
+        if(P[current].ps_fs != nil && resmi){
+            current = P[current].ps_fs;
+            printf("%c -> ",P[current].info);
+        }else if(P[current].ps_nb != nil){
+            current = P[current].ps_nb;
+            printf("%c -> ",P[current].info);
+            resmi = true;
+        }else{
+            current = P[current].ps_pr;
+            resmi = false;
+        }
+    }
 }
 
 void InOrder (Isi_Tree P){
