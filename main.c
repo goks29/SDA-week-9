@@ -57,7 +57,21 @@ int main(){
                 printf("\n\n");
                 break;
             case 8:
-                
+                char huruf;
+                int hasil;
+
+                printf("\nMasukan huruf yang ingin dicari level nya : ");
+                scanf(" %c",&huruf);
+                hasil = Level(F,huruf);
+                getchar();
+                Level(F,huruf);
+
+                if (hasil == nil) {
+                    printf("Huruf %c tidak ditemukan di tree.\n", huruf);
+                } else {
+                    printf("Kedalaman huruf %c adalah %d\n", huruf, hasil);
+                }
+
                 break;
             case 9:
             

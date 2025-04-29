@@ -175,6 +175,11 @@ void cetak(Isi_Tree P, index, int level) {
     if (index == nil || P[index].info == '\0'){
         return;
     } 
+    
+    void cetak(int index, int level){
+        if (index == nil || P[index].info == '\0'){
+            return;
+        } 
 
     for (int i = 0; i < level; i++) {
         printf("  ");
@@ -222,6 +227,24 @@ int nbDaun (Isi_Tree P){
 
 
 int Level (Isi_Tree P, infotype X){
+    int index = 1;
+    int depth = 0;
+
+    while (P[index].info != X && index <= jml_maks) {
+        index++;
+    }
+
+    if (index > jml_maks) {
+        return nil;
+    }
+
+    while (P[index].ps_pr != nil) {
+        index = P[index].ps_pr;
+        depth++;
+    }
+
+    return depth;
+
 
 }
 
