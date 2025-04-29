@@ -2,6 +2,8 @@
 #include "nbtrees.h"
 
 int main(){
+    char huruf;
+    int hasil;
     Isi_Tree F;
     Create_tree(F, 0);
 
@@ -57,10 +59,22 @@ int main(){
                 printf("\n\n");
                 break;
             case 8:
-                
+                printf("\nMasukan huruf yang ingin dicari level nya : ");
+                scanf(" %c",&huruf);
+                hasil = Level(F,huruf);
+                getchar();
+                Level(F,huruf);
+
+                if (hasil == nil) {
+                    printf("Huruf %c tidak ditemukan di tree.\n", huruf);
+                } else {
+                    printf("Kedalaman huruf %c adalah %d\n", huruf, hasil);
+                }
+
                 break;
             case 9:
-            
+                hasil = Depth(F);
+                printf("Kedalaman tree ini adalah : %d \n",hasil);
                 break;
             case 10:
                 
