@@ -171,7 +171,7 @@ void PrintTree(Isi_Tree P) {
     cetak(P,1, 0); 
 }
 
-void cetak(Isi_Tree P, index, int level) {
+void cetak(Isi_Tree P,int index, int level) {
     if (index == nil || P[index].info == '\0'){
         return;
     } 
@@ -244,8 +244,6 @@ int Level (Isi_Tree P, infotype X){
     }
 
     return depth;
-
-
 }
 
 int Depth (Isi_Tree P){
