@@ -3,56 +3,70 @@
 
 int main(){
     Isi_Tree F;
-    Create_tree(F,0);
-    InOrder(F,1);
-    int PilihMenu;
-    if (IsEmpty(F))
-    {
+    Create_tree(F, 0);
+    InOrder(F, 1); 
+
+    if (IsEmpty(F)) {
         printf("Tree Gagal Dibuat");
-        return;
+        return 0;
     }
-    
+
+    int PilihMenu;
     while(1){
-        printf( " 1. Traversal PreOrder\n "
-                "2. Traversal InOrder\n "
-                "3. Traversal PostOrder\n "
-                "4. Traversal Level Order\n"
-                " 5. Print Tree\n "
-                "6. Search Node Tree\n" 
-                " 7. Jumlah Daun/Leaf\n "
-                "8. Mencari Level Node Tree\n" 
-                " 9. Kedalaman Tree\n"
-                "10. Membandingkan 2 Node Tree\n" 
-                "11. Exit");
-        printf("\nPilih Menu : ");
-        scanf("%d",&PilihMenu);
+        printf("\n==========================\n");
+        printf(" 1. Traversal PreOrder\n"
+               " 2. Traversal InOrder\n"
+               " 3. Traversal PostOrder\n"
+               " 4. Traversal Level Order\n"
+               " 5. Print Tree\n"
+               " 6. Search Node Tree\n"
+               " 7. Jumlah Daun/Leaf\n"
+               " 8. Mencari Level Node Tree\n"
+               " 9. Kedalaman Tree\n"
+               "10. Membandingkan 2 Node Tree\n"
+               "11. Exit\n");
+        printf("Pilih Menu: ");
+        scanf("%d", &PilihMenu);
 
-        if(PilihMenu == 1){
-            PreOrder(F,1);
-            printf("\n\n");
-        }else if(PilihMenu == 2){
+        switch (PilihMenu) {
+            case 1:
+                PreOrder(F, 1);
+                printf("\n\n");
+                break;
+            case 2:
+                InOrder(F, 1);
+                printf("\n\n");
+                break;
+            case 3:
+               
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                
+                break;
+            case 6:
+                
+                break;
+            case 7:
+              
+                break;
+            case 8:
+                
+                break;
+            case 9:
             
-        }else if(PilihMenu == 3){
-
-        }else if(PilihMenu == 4){
-
-        }else if(PilihMenu == 5){
-
-        }else if(PilihMenu == 6){
-            
-        }else if(PilihMenu == 7){
-            
-        }else if(PilihMenu == 8){
-            
-        }else if(PilihMenu == 9){
-            
-        }else if(PilihMenu == 10){
-            
-        }else if(PilihMenu == 11){
-            
-        }else{
-            printf("\nInput Tidak Valid\n");
-        };
-    };
-
+                break;
+            case 10:
+                
+                break;
+            case 11:
+                printf("Program selesai.\n");
+                return 0;
+            default:
+                printf("Input tidak valid.\n");
+                break;
+        }
+    }
 }
