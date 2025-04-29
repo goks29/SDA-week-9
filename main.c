@@ -2,5 +2,7 @@
 #include "nbtrees.h"
 
 int main(){
-    printf("Test");
+    Isi_Tree F;
+    Create_tree(F,0);
+    printf("%c",F[1].info);
 }
