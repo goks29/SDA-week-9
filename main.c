@@ -10,5 +10,6 @@ int main(){
         return;
     }
     
-    printf("%c",F[1].info);
+    PreOrder(F,1);
+    
 }
