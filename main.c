@@ -52,7 +52,8 @@ int main(){
                 
                 break;
             case 7:
-              
+                nbDaun(F);
+                printf("\n\n");
                 break;
             case 8:
                 

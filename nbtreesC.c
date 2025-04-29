@@ -174,8 +174,31 @@ int nbElmt (Isi_Tree P){
 }
 
 int nbDaun (Isi_Tree P){
+    int current = 1;
+    int Jml_Daun = 0;
+    boolean resmi = true;
 
+    while (current != nil) {
+        if (P[current].ps_fs != nil && resmi) {
+            current = P[current].ps_fs;
+            resmi = true;
+        } else {
+            if (P[current].ps_fs == nil) {
+                Jml_Daun++;
+            }
+
+            if (P[current].ps_nb != nil) {
+                current = P[current].ps_nb;
+                resmi = true;
+            } else {
+                current = P[current].ps_pr;
+                resmi = false;
+            }
+        }
+    }
+    printf("Jumlah Leaf pada Tree : %d",Jml_Daun);
 }
+
 
 int Level (Isi_Tree P, infotype X){
 
