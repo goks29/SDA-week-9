@@ -104,8 +104,30 @@ void PostOrder (Isi_Tree P){
 
 }
 
-void Level_order(Isi_Tree X, int Maks_node){
+void Level_order(Isi_Tree P, int Maks_node){
+    int queue[jml_maks];
+    int child, current;
+    int front = 0, rear = 0;
 
+    if (Maks_node == nil) {
+        return;
+    }
+
+    rear++;
+    queue[rear] = Maks_node;
+
+    while (front < rear) {
+        front++;
+        current = queue[front]; 
+        printf("%c -> ", P[current].info);
+        child = P[current].ps_fs;
+        while (child != nil) {
+            rear++;
+            queue[rear] = child;
+            child = P[child].ps_nb;
+        }
+    }
+    
 }
 
 void PrintTree (Isi_Tree P){

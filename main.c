@@ -39,7 +39,7 @@ int main(){
                
                 break;
             case 4:
-                
+                Level_order(F,1);
                 break;
             case 5:
                 
