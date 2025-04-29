@@ -37,13 +37,16 @@ int main(){
                 printf("\n\n");
                 break;
             case 3:
-               
+                PostOrder(F);
+                printf("\n\n");
                 break;
             case 4:
                 
                 break;
             case 5:
-                
+                printf("\n");
+                PrintTree(F);
+                printf("\n\n");
                 break;
             case 6:
                 
