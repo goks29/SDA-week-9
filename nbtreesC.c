@@ -74,8 +74,15 @@ boolean IsEmpty (Isi_Tree P){
 }
 
 /***** Traversal *****/
-void PreOrder (Isi_Tree P){
-    
+void PreOrder (Isi_Tree P,int index){
+    if(index == nil){
+        return;
+    }else{
+        printf("%c -> ",P[index].info);
+        PreOrder(P,P[index].ps_fs);
+        PreOrder(P,P[index].ps_nb);
+    }
+
 }
 
 void InOrder (Isi_Tree P, int index){
