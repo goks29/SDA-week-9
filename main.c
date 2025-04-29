@@ -52,7 +52,8 @@ int main(){
                 
                 break;
             case 7:
-                nbDaun(F);
+                int TDaun = nbDaun(F);
+                printf("Jumlah Leaf Pada Tree : %d",TDaun);
                 printf("\n\n");
                 break;
             case 8:
