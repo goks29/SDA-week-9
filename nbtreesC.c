@@ -75,7 +75,26 @@ boolean IsEmpty (Isi_Tree P){
 
 /***** Traversal *****/
 void PreOrder (Isi_Tree P){
-    
+    int current;
+    boolean resmi;
+
+    current = 1;
+    resmi = true;
+    printf("%c -> ",P[current].info);
+
+    while(current != nil){
+        if(P[current].ps_fs != nil && resmi){
+            current = P[current].ps_fs;
+            printf("%c -> ",P[current].info);
+        }else if(P[current].ps_nb != nil){
+            current = P[current].ps_nb;
+            printf("%c -> ",P[current].info);
+            resmi = true;
+        }else{
+            current = P[current].ps_pr;
+            resmi = false;
+        }
+    }
 }
 
 void InOrder (Isi_Tree P){
@@ -101,7 +120,25 @@ void InOrder (Isi_Tree P){
 }
 
 void PostOrder (Isi_Tree P){
+    int current;
+    boolean resmi;
 
+    current = 1;
+    resmi = false;
+    while(current != nil){
+        if(P[current].ps_fs != nil && !resmi){
+            current = P[current].ps_fs;
+        }else{
+            printf("%c -> ",P[current].info);
+            if(P[current].ps_nb != nil){
+                current = P[current].ps_nb;
+                resmi = false;
+            }else{
+                current = P[current].ps_pr;
+                resmi = true;
+            }
+        }
+    }
 }
 
 void Level_order(Isi_Tree P, int Maks_node){
@@ -130,8 +167,23 @@ void Level_order(Isi_Tree P, int Maks_node){
     
 }
 
-void PrintTree (Isi_Tree P){
+void PrintTree(Isi_Tree P) {
+    
+    void cetak(int index, int level) {
+        if (index == nil || P[index].info == '\0'){
+            return;
+        } 
 
+        for (int i = 0; i < level; i++) {
+            printf("  ");
+        }
+        printf("%c\n", P[index].info);
+
+        cetak(P[index].ps_fs, level + 1); 
+        cetak(P[index].ps_nb, level);     
+    }
+
+    cetak(1, 0); 
 }
 
 boolean Search (Isi_Tree P, infotype X){
@@ -144,8 +196,31 @@ int nbElmt (Isi_Tree P){
 }
 
 int nbDaun (Isi_Tree P){
+    int current = 1;
+    int Jml_Daun = 0;
+    boolean resmi = true;
 
+    while (current != nil) {
+        if (P[current].ps_fs != nil && resmi) {
+            current = P[current].ps_fs;
+            resmi = true;
+        } else {
+            if (P[current].ps_fs == nil) {
+                Jml_Daun++;
+            }
+
+            if (P[current].ps_nb != nil) {
+                current = P[current].ps_nb;
+                resmi = true;
+            } else {
+                current = P[current].ps_pr;
+                resmi = false;
+            }
+        }
+    }
+    printf("Jumlah Leaf pada Tree : %d",Jml_Daun);
 }
+
 
 int Level (Isi_Tree P, infotype X){
 

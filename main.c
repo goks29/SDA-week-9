@@ -29,26 +29,31 @@ int main(){
 
         switch (PilihMenu) {
             case 1:
-                
+                PreOrder(F);
+                printf("\n\n");
                 break;
             case 2:
                 InOrder(F);
                 printf("\n\n");
                 break;
             case 3:
-               
+                PostOrder(F);
+                printf("\n\n");
                 break;
             case 4:
                 Level_order(F,1);
                 break;
             case 5:
-                
+                printf("\n");
+                PrintTree(F);
+                printf("\n\n");
                 break;
             case 6:
                 
                 break;
             case 7:
-              
+                nbDaun(F);
+                printf("\n\n");
                 break;
             case 8:
                 
