@@ -171,23 +171,22 @@ void PrintTree(Isi_Tree P) {
     cetak(P,1, 0); 
 }
 
-void cetak(Isi_Tree P, index, int level) {
+void cetak(Isi_Tree P, int index, int level) {
     if (index == nil || P[index].info == '\0'){
         return;
     } 
     
-    void cetak(int index, int level){
-        if (index == nil || P[index].info == '\0'){
-            return;
-        } 
+    if (index == nil || P[index].info == '\0'){
+        return;
+    } 
 
     for (int i = 0; i < level; i++) {
         printf("  ");
     }
     printf("%c\n", P[index].info);
 
-    cetak(P[index].ps_fs, level + 1); 
-    cetak(P[index].ps_nb, level);     
+    cetak(P,P[index].ps_fs, level + 1); 
+    cetak(P,P[index].ps_nb, level);     
 }
 
 boolean Search (Isi_Tree P, infotype X){
