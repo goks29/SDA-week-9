@@ -7,7 +7,7 @@
 #define kebawah 1
 #define keatas 2
 #define kekanan 3
-#define NULL -1
+#define nil -1
 /***************************/
 /* Type data */
 /***************************/
