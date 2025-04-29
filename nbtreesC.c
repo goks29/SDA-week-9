@@ -72,7 +72,6 @@ boolean IsEmpty (Isi_Tree P){
         return false;
     }
     
-    printf("blaablablableblebleblulblbulbu HAP blublbulublbubbulblblbbull");
 }
 
 
