@@ -6,9 +6,9 @@ int main(){
     Create_tree(F,0);
     if (IsEmpty(F))
     {
-        printf("kosong");
+        printf("Tree Gagal Dibuat");
+        return;
     }
-    (F);
     
     printf("%c",F[1].info);
 }
