@@ -4,7 +4,6 @@
 int main(){
     Isi_Tree F;
     Create_tree(F, 0);
-    InOrder(F, 1); 
 
     if (IsEmpty(F)) {
         printf("Tree Gagal Dibuat");
@@ -30,11 +29,10 @@ int main(){
 
         switch (PilihMenu) {
             case 1:
-                PreOrder(F, 1);
-                printf("\n\n");
+                
                 break;
             case 2:
-                InOrder(F, 1);
+                InOrder(F);
                 printf("\n\n");
                 break;
             case 3:

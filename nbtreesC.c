@@ -74,27 +74,30 @@ boolean IsEmpty (Isi_Tree P){
 }
 
 /***** Traversal *****/
-void PreOrder (Isi_Tree P,int index){
-    if(index == nil){
-        return;
-    }else{
-        printf("%c -> ",P[index].info);
-        PreOrder(P,P[index].ps_fs);
-        PreOrder(P,P[index].ps_nb);
-    }
-
+void PreOrder (Isi_Tree P){
+    
 }
 
-void InOrder (Isi_Tree P, int index){
-    if (index == nil ) {
-        return;
-    }
-    
-    InOrder(P,P[index].ps_fs);
-    printf("%c -> ",P[index].info);
-    InOrder(P,P[index].ps_nb);
-    
+void InOrder (Isi_Tree P){
+    int current = 1;
+    boolean resmi = true;
 
+    while (current != nil) {
+        if (P[current].ps_fs != nil && resmi) {
+            current = P[current].ps_fs;
+            resmi = true;
+        } else {
+            printf("%c -> ",P[current].info);
+        
+            if(P[current].ps_nb != nil) {
+                current = P[current].ps_nb;
+                resmi = true;
+            } else {
+                current = P[current].ps_pr;
+                resmi = false;
+            }
+        }
+    }    
 }
 
 void PostOrder (Isi_Tree P){
