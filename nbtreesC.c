@@ -65,7 +65,13 @@ void Create_tree(Isi_Tree X, int Jml_Node){
 }
 
 boolean IsEmpty (Isi_Tree P){
-
+    if (P[1].ps_fs == nil)
+    {
+        return true;
+    }else{
+        return false;
+    }
+    
 }
 
 

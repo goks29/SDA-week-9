@@ -4,5 +4,11 @@
 int main(){
     Isi_Tree F;
     Create_tree(F,0);
+    if (IsEmpty(F))
+    {
+        printf("kosong");
+    }
+    (F);
+    
     printf("%c",F[1].info);
 }
