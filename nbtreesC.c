@@ -249,14 +249,18 @@ int Level (Isi_Tree P, infotype X){
 
 
 int Depth_Rekursif(Isi_Tree P, int node) {
-    if (node == nil) return 0;
+    if (node == nil) {
+        return 0;
+    } 
 
     int max = 0;
     int child = P[node].ps_fs;
 
     while (child != nil) {
         int d = Depth_Rekursif(P, child);
-        if (d > max) max = d;
+        if (d > max) {
+            max = d;
+        } 
         child = P[child].ps_nb;
     }
 
