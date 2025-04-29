@@ -30,7 +30,7 @@ void Create_tree(Isi_Tree X, int Jml_Node){
     //5
     X[5].info = 'E';
     X[5].ps_fs = 9;
-    X[5].ps_nb = 10;
+    X[5].ps_nb = nil;
     X[5].ps_pr = 2;
 
     //6
@@ -75,10 +75,18 @@ boolean IsEmpty (Isi_Tree P){
 
 /***** Traversal *****/
 void PreOrder (Isi_Tree P){
-
+    
 }
 
-void InOrder (Isi_Tree P){
+void InOrder (Isi_Tree P, int index){
+    if (index == nil ) {
+        return;
+    }
+    
+    InOrder(P,P[index].ps_fs);
+    printf("%c -> ",P[index].info);
+    InOrder(P,P[index].ps_nb);
+    
 
 }
 

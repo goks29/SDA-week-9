@@ -41,7 +41,7 @@ void PreOrder (Isi_Tree P);
 /* IS : P terdefinisi */
 /* FS : Semua simpul P sudah ditampilkan secara PreOrder : Parent,
 fs, nb */
-void InOrder (Isi_Tree P);
+void InOrder (Isi_Tree P, int i);
 /* Traversal InOrder */
 /* IS : P terdefinisi */
 /* FS : Semua simpul P sudah ditampilkan secara InOrder : fs, Parent,
