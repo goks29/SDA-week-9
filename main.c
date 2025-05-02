@@ -51,7 +51,18 @@ int main(){
                 printf("\n\n");
                 break;
             case 6:
-                
+                char huruf; 
+                boolean cari;
+                printf("Masukan huruf node yang ingin dicari : ");
+                scanf(" %c",&huruf);
+                getchar();
+                cari = Search(F,huruf);
+
+                if (cari == true) {
+                    printf("node %c ada",huruf);
+                } else {
+                    printf("node %c tidak ada", huruf);
+                }
                 break;
             case 7:
                 int TDaun = nbDaun(F);

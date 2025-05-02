@@ -97,18 +97,21 @@ void PreOrder (Isi_Tree P){
     }
 }
 
-void InOrder (Isi_Tree P){
+void InOrder(Isi_Tree P){
     int current = 1;
     boolean resmi = true;
 
     while (current != nil) {
         if (P[current].ps_fs != nil && resmi) {
             current = P[current].ps_fs;
-            resmi = true;
         } else {
-            printf("%c -> ",P[current].info);
-        
-            if(P[current].ps_nb != nil) {
+            if (resmi) {
+                printf("%c -> ", P[current].info);
+            }
+            if (current == P[P[current].ps_pr].ps_fs) {
+                printf("%c -> ", P[P[current].ps_pr].info);
+            }
+            if (P[current].ps_nb != nil) {
                 current = P[current].ps_nb;
                 resmi = true;
             } else {
@@ -116,8 +119,9 @@ void InOrder (Isi_Tree P){
                 resmi = false;
             }
         }
-    }    
+    }
 }
+
 
 void PostOrder (Isi_Tree P){
     int current;
@@ -190,7 +194,13 @@ void PrintTree(Isi_Tree P) {
 }
 
 boolean Search (Isi_Tree P, infotype X){
-
+    for (int current = 1; current != jml_maks;current++){
+        if (P[current].info == X) {
+            return true;
+        }
+    }
+    return false;
+    
 }
 
 /***** Fungsi Lain *****/
