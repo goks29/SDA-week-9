@@ -62,6 +62,8 @@ void Create_tree(Isi_Tree X, int Jml_Node){
     X[10].ps_fs = nil;
     X[10].ps_nb = nil;
     X[10].ps_pr = 5;
+
+
 }
 
 boolean IsEmpty (Isi_Tree P){
@@ -70,6 +72,19 @@ boolean IsEmpty (Isi_Tree P){
         return true;
     }else{
         return false;
+    }
+}
+
+void PrintAwal(Isi_Tree X){
+    int i;
+    for(i=1;i<11;i++){
+        printf("--> indeks ke %d\n",i);
+        printf("----------------------------");
+        printf("\nInfo Array ke-%d : %c",i,X[i].info);
+        printf("\nfirst son array ke-%d : %d",i,X[i].ps_fs);
+        printf("\nnext brother array ke-%d : %d",i,X[i].ps_nb);
+        printf("\nparent array ke-%d : %d",i,X[i].ps_pr);
+        printf("\n----------------------------\n\n");
     }
 }
 

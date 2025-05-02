@@ -3,14 +3,18 @@
 
 int main(){
     char huruf;
-    int hasil,TDaun;
+    int hasil,TDaun; 
+    boolean cari;
     Isi_Tree F;
     Create_tree(F, 0);
 
     if (IsEmpty(F)) {
         printf("Tree Gagal Dibuat");
         return 0;
+    }else{
+        PrintAwal(F);
     }
+
 
     int PilihMenu;
     while(1){
@@ -51,8 +55,7 @@ int main(){
                 printf("\n\n");
                 break;
             case 6:
-                char huruf; 
-                boolean cari;
+
                 printf("Masukan huruf node yang ingin dicari : ");
                 scanf(" %c",&huruf);
                 getchar();

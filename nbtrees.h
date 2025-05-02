@@ -35,6 +35,8 @@ void Create_tree(Isi_Tree X, int Jml_Node);
 boolean IsEmpty (Isi_Tree P);
 /* Mengirimkan true jika Isi_Tree KOSONG */
 
+void PrintAwal(Isi_Tree X);
+
 /***** Traversal *****/
 void PreOrder (Isi_Tree P);
 /* Traversal PreOrder */
