@@ -2,7 +2,7 @@
 #include "nbtrees.h"
 
 int main(){
-    char huruf;
+    char huruf,banding1,banding2,penampungBanding;
     int hasil,TDaun,JmlNode; 
     boolean cari;
     Isi_Tree F;
@@ -92,13 +92,30 @@ int main(){
 
                 break;
 
-
             case 10:
                 hasil = Depth(F);
                 printf("Kedalaman tree ini adalah : %d \n",hasil);
             break;
             case 11:
+                printf("Masukan node yang ingin di bandingkan? (1) : ");
+                scanf(" %c",&banding1);
+                getchar();
 
+                printf("Masukan node yang ingin di bandingkan? (2) : ");
+                scanf("%c",&banding2);
+                getchar();
+
+                penampungBanding = Max(F,banding1,banding2);
+
+                if (penampungBanding == '\0') {
+                    printf("Salah satu node yang dibandingkan tidak ada \n");
+                } else if (penampungBanding == 0) {
+                    printf("Node yang dibandingkan berada di level yang sama \n");
+                } else {
+                    printf("%c adalah node dengan level terdalam \n", penampungBanding);
+                }
+
+                
                 break;
             case 12:
                 printf("Program selesai.\n");

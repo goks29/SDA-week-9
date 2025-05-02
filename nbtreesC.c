@@ -274,7 +274,7 @@ int Level (Isi_Tree P, infotype X){
     int index = 1;
     int depth = 0;
 
-    while (P[index].info != X && index <= jml_maks) {
+    while (index <= jml_maks && P[index].info != X) {
         index++;
     }
 
@@ -314,6 +314,19 @@ int Depth(Isi_Tree P) {
     return Depth_Rekursif(P, 1);
 }
 
-int Max (infotype Data1, infotype Data2){
+int Max (Isi_Tree P, infotype Data1, infotype Data2){
+    int data1 = Level(P,Data1);
+    int data2 = Level(P,Data2);
 
+    if (data1 == nil || data2 == nil) {
+        return nil;
+    }
+    
+    if (data1 == data2) {
+        return 0;
+    } else if (data1 > data2){
+        return Data1;
+    } else {
+        return Data2;
+    }
 }

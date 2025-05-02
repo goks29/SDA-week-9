@@ -75,6 +75,6 @@ int Depth (Isi_Tree P);
 /* Pohon Biner mungkin Kosong, mengirimkan 'depth' yaitu tinggi dari
 Pohon */
 /* Basis : Pohon Kosong, tingginya Nol */
-int Max (infotype Data1, infotype Data2);
+int Max (Isi_Tree P, infotype Data1, infotype Data2);
 /* Mengirimkan Nilai terbesar dari dua data */
 #endif
