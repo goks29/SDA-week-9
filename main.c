@@ -3,7 +3,7 @@
 
 int main(){
     char huruf;
-    int hasil;
+    int hasil,TDaun;
     Isi_Tree F;
     Create_tree(F, 0);
 
@@ -65,7 +65,7 @@ int main(){
                 }
                 break;
             case 7:
-                int TDaun = nbDaun(F);
+                TDaun = nbDaun(F);
                 printf("Jumlah Leaf Pada Tree : %d",TDaun);
                 printf("\n\n");
                 break;
