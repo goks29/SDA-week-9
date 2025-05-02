@@ -26,10 +26,11 @@ int main(){
                " 5. Print Tree\n"
                " 6. Search Node Tree\n"
                " 7. Jumlah Daun/Leaf\n"
-               " 8. Mencari Level Node Tree\n"
-               " 9. Kedalaman Tree\n"
-               "10. Membandingkan 2 Node Tree\n"
-               "11. Exit\n");
+               " 8. Jumlah Node\n"
+               " 9. Mencari Level Node Tree\n"
+               " 10. Kedalaman Tree\n"
+               "11. Membandingkan 2 Node Tree\n"
+               "12. Exit\n");
         printf("Pilih Menu: ");
         scanf("%d", &PilihMenu);
 
@@ -73,6 +74,10 @@ int main(){
                 printf("\n\n");
                 break;
             case 8:
+
+
+                break;
+            case 9:
                 printf("\nMasukan huruf yang ingin dicari level nya : ");
                 scanf(" %c",&huruf);
                 hasil = Level(F,huruf);
@@ -86,14 +91,16 @@ int main(){
                 }
 
                 break;
-            case 9:
+
+
+            case 10:
                 hasil = Depth(F);
                 printf("Kedalaman tree ini adalah : %d \n",hasil);
-                break;
-            case 10:
-                
-                break;
+            break;
             case 11:
+
+                break;
+            case 12:
                 printf("Program selesai.\n");
                 return 0;
             default:
