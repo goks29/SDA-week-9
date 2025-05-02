@@ -3,7 +3,7 @@
 
 int main(){
     char huruf;
-    int hasil,TDaun; 
+    int hasil,TDaun,JmlNode; 
     boolean cari;
     Isi_Tree F;
     Create_tree(F, 0);
@@ -74,8 +74,8 @@ int main(){
                 printf("\n\n");
                 break;
             case 8:
-
-
+                JmlNode = nbElmt(F);
+                printf("Jumlah Node Pada Tree Adalah : %d",JmlNode);
                 break;
             case 9:
                 printf("\nMasukan huruf yang ingin dicari level nya : ");

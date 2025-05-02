@@ -220,7 +220,27 @@ boolean Search (Isi_Tree P, infotype X){
 
 /***** Fungsi Lain *****/
 int nbElmt (Isi_Tree P){
+    int current,jmlnode;
+    boolean resmi;
+    jmlnode = 0;
+    current = 1;
+    resmi = false;
 
+    while(current != nil){
+        if(P[current].ps_fs != nil && !resmi){
+            current = P[current].ps_fs;
+        }else{
+            jmlnode++;
+            if(P[current].ps_nb != nil){
+                current = P[current].ps_nb;
+                resmi = false;
+            }else{
+                current = P[current].ps_pr;
+                resmi = true;
+            }
+        }
+    }
+    return jmlnode;
 }
 
 int nbDaun (Isi_Tree P){
