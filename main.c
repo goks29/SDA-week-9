@@ -96,6 +96,7 @@ int main(){
                 hasil = Depth(F);
                 printf("Kedalaman tree ini adalah : %d \n",hasil);
             break;
+            
             case 11:
                 printf("Masukan node yang ingin di bandingkan? (1) : ");
                 scanf(" %c",&banding1);
@@ -114,8 +115,7 @@ int main(){
                 } else {
                     printf("%c adalah node dengan level terdalam \n", penampungBanding);
                 }
-
-                
+  
                 break;
             case 12:
                 printf("Program selesai.\n");
